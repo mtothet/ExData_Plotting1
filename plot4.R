@@ -9,7 +9,7 @@ plot_data <- my_data[my_data$Date == start_date | my_data$Date == end_date, ]
 plot_data["Date_time"] <- paste(plot_data$Date, plot_data$Time)
 plot_data$Date_time <- as.POSIXlt(plot_data$Date_time, format = "%d/%m/%Y %H:%M:%S")
 
-## Opening graphic device
+## Opening graphics device
 png(filename = "plot4.png", bg = "transparent")
 
 ## Creating the plots
@@ -26,5 +26,5 @@ legend(x = "topright", legend = colnames(plot_data)[7:9], col = c("black", "red"
 
 plot(x = plot_data$Date_time, y = plot_data$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_reactive_power")
 
-## Closing graphic device
+## Closing graphics device
 dev.off()
