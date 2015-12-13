@@ -8,7 +8,7 @@ end_date <- "2/2/2007"
 plot_data <- my_data[my_data$Date == start_date | my_data$Date == end_date, ]
 
 ## Opening graphic device
-png(filename = "plot1.png")
+png(filename = "plot1.png", bg = "transparent")
 
 ## Creating the plot
 hist(x = plot_data$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")

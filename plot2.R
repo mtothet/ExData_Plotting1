@@ -10,7 +10,7 @@ plot_data["Date_time"] <- paste(plot_data$Date, plot_data$Time)
 plot_data$Date_time <- as.POSIXlt(plot_data$Date_time, format = "%d/%m/%Y %H:%M:%S")
 
 ## Opening graphic device
-png(filename = "plot2.png")
+png(filename = "plot2.png", bg = "transparent")
 
 ## Creating the plot
 plot(x = plot_data$Date_time, y = plot_data$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")

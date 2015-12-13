@@ -10,7 +10,7 @@ plot_data["Date_time"] <- paste(plot_data$Date, plot_data$Time)
 plot_data$Date_time <- as.POSIXlt(plot_data$Date_time, format = "%d/%m/%Y %H:%M:%S")
 
 ## Opening graphic device
-png(filename = "plot4.png")
+png(filename = "plot4.png", bg = "transparent")
 
 ## Creating the plots
 par(mfrow = c(2, 2))
